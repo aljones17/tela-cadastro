@@ -1,0 +1,378 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: linear-gradient(to left, transparent 20%, black 65%), url(/img/concert.jpg);
+    background-size: cover;
+}
+.container{
+    display: flex;
+}
+
+/*Display-Left*/
+.display-left{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 50%;
+    height:700px;
+    padding-top: 20px;
+    
+
+}
+.header-left{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 400px;
+}
+
+.header-left > a{
+    text-decoration: none;
+    width: max-content;
+    height: max-content;
+    color: rgb(6, 182, 0);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header-left > a:hover{
+    color:whitesmoke;
+    opacity: 1;
+    transition: 0.5s;
+    font-size: 15.3px;
+}
+
+.header-left > h1{
+    color: whitesmoke;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 25px;
+}
+
+#check-terms{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+#check-terms > p{
+    color: whitesmoke;
+    font-size: 0.6em;
+}
+
+#form{
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#form label{
+    margin-bottom: -15px;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+input, select {
+    height: 40px;
+    border-style: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+#day-month-year{
+    display: flex;
+    justify-content: space-between;
+}
+
+#day-month-year > input:nth-child(1){
+    width: 75px;
+}
+#day-month-year > select{
+    width: 220px;
+}
+#day-month-year > input:nth-child(3){
+    width: 90px;
+}
+
+#phone-confirm{
+    display: flex;
+    flex-flow: row wrap;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+
+#phone-confirm > input:nth-child(1){
+    width: 100%;
+}
+
+#phone-confirm > input:nth-child(2){
+    width: 63%;
+}
+
+#phone-confirm > input:nth-child(3){
+    width: 35%;
+    font-size: 15px;
+}
+
+#btn-enter{
+    height: 50px;
+    font-size: 20px;
+}
+
+.btn{
+    background-color: rgb(6, 182, 0);
+    opacity: 0.8;
+    border-radius:8px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(6, 182, 0);
+    opacity: 1;
+    transition: 0.5s;
+    color: white;
+}
+
+/*Display-Right*/
+.display-right{
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    height: 700px;
+    padding-top: 20px;
+}
+
+.header-right{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 400px;
+}
+
+.header-right > h1{
+    color: whitesmoke;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    width: 300px;
+}
+
+.music{
+    width: 575px;
+    text-align: center;
+}
+
+.music > p{
+    color: whitesmoke;
+    font-size: 15px;
+}
+  
+.music2{
+    display: none;
+}
+
+/*Footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    color: whitesmoke;
+    font-size: 0.6em;
+    background: linear-gradient(to bottom, transparent 20%, rgb(46, 41, 0) 100%);
+    padding: 20px;
+}
+
+.social-media{
+    padding-top: 10px;
+}
+
+.social-media > a >  i {
+    font-size: 5em;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(6, 182, 0);
+    opacity: 0.8;
+}
+.social-media > a >  i:hover{
+    opacity: 1;
+    transition: 0.5s;
+    color: whitesmoke;
+}
+
+
+/*Mobile*/
+
+@media (max-width: 450px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .display-left,
+    .display-right,
+    .header-left,
+    .header-right {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    
+    .header-left > a {
+        margin-left: 20px;
+    }
+
+    .header-left > h1{
+        text-align: center;
+    }
+
+    #check-terms{
+        margin-left: 15px;
+    }
+    #check-terms > p{
+        display: flex;
+        width: 100%;
+        font-size: 0.5em;
+    }
+    #form{
+        max-width: 90%;
+    }
+
+    #day-month-year{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+    }
+
+    #day-month-year>#day{
+        width:100%;
+    }
+    #day-month-year>#month{
+        width: 100%;
+    }
+    #day-month-year>#year{
+        width: 100%;
+    }
+
+    #form>.btn,
+    #phone-confirm>#code-btn{
+        opacity: 1;
+        font-size: 12px;
+    }
+
+    /*Display-right*/
+
+    .header-right{
+        width: max-content;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .music{
+        display: none
+        ;
+    }
+
+    .music2{
+        display: contents;
+        width: 50%;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
+
+@media (min-width:451px) and (max-width: 768px) {
+    .container{
+        padding: 20px;
+        display: flex;
+    }
+
+    /*Display-Left*/
+    
+    .display-left,
+    .display-right{
+        max-width: 50%;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-left{
+        width: max-content;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
+
+    #form{
+        width: 80%;
+    }
+
+    #day-month-year{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+    }
+
+    #day-month-year>#day{
+        width:100%;
+    }
+    #day-month-year>#month{
+        width: 100%;
+    }
+    #day-month-year>#year{
+        width: 100%;
+    }
+
+    #form>.btn,
+    #phone-confirm>#code-btn{
+        opacity: 1;
+        font-size: 12px;
+    }
+
+
+    /*Display-Right*/
+
+    .header-right{
+        width: max-content;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .music{
+        padding-top: 45px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .music > iframe{
+        display:flex;
+        width: 320px;
+        height: 400px;
+    }
+}
+
+
